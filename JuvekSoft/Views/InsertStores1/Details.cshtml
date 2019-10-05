@@ -1,0 +1,122 @@
+﻿@model JuvekSoft.Models.InsertStore
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>InsertStore</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FacetingType.FacName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FacetingType.FacName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InsertMaterial.InsMatName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InsertMaterial.InsMatName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Unit.UnitName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Unit.UnitName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Unit1.UnitName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Unit1.UnitName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Unit2.UnitName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Unit2.UnitName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Size1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Size1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Size2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Size2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Size3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Size3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtherInfo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InUse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InUse)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

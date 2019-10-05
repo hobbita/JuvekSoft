@@ -1,0 +1,71 @@
+﻿@*@model IEnumerable<JuvekSoft.Models.InsertMaterial>*@
+
+@{
+    ViewBag.Title = "Dictionary";
+}
+
+
+
+
+<table cellpadding="5px" align="center">
+    <tr><td colspan="3" align="center"><h2>Справочники</h2></td></tr>
+    <tr>
+        <td>
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Справочник типов проката</div>
+                <div class="card-body">
+                    <h4 class="card-title"><a class="card-link" href="/MetalTypes/Index">Справочник типов проката</a></h4>
+                    <p class="card-text">На этой странице вы сможете просмотреть, изменить, добавить или удалить используемые типы проката металла.</p>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Справочник типов металлов</div>
+                <div class="card-body">
+                    <h4 class="card-title"><a class="card-link" href="/MetalNames/Index">Справочник типов металлов</a></h4>
+                    <p class="card-text">На этой странице вы сможете просмотреть, изменить, добавить или удалить типы используемых металлов.</p>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="card border-warning mb-3" style="max-width: 20rem;">
+                <div class="card-header">Справочник единиц измерения</div>
+                <div class="card-body">
+                    <h4 class="card-title"><a class="card-link" href="/Units/Index">Справочник единиц измерения</a></h4>
+                    <p class="card-text">На этой странице вы сможете просмотреть, изменить, добавить или удалить используемые единицы измерения.</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="card border-dark mb-3" style="max-width: 20rem;">
+                <div class="card-header">Справочник материалов вставок</div>
+                <div class="card-body">
+                    <h4 class="card-title"><a class="card-link" href="/InsertMaterials/Index">Справочник материалов вставок</a></h4>
+                    <p class="card-text">На этой странице вы сможете просмотреть, изменить, добавить или удалить материалы вставок.</p>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="card border-dark mb-3" style="max-width: 20rem;">
+                <div class="card-header">Справочник форм огранки вставок</div>
+                <div class="card-body">
+                    <h4 class="card-title"><a class="card-link" href="/FacetingTypes/Index">Справочник форм огранки вставок</a></h4>
+                    <p class="card-text">На этой странице вы сможете просмотреть, изменить, добавить или удалить формы огранки.</p>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="card border-secondary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Справочник операций</div>
+                <div class="card-body">
+                    <h4 class="card-title"><a class="card-link" href="/Operations/Index">Справочник операций</a></h4>
+                    <p class="card-text">На этой странице вы сможете просмотреть, изменить, добавить или удалить возможные операции для ваших изделий.</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+

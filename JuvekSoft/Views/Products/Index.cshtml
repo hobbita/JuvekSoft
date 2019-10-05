@@ -1,0 +1,58 @@
+﻿@model IEnumerable<JuvekSoft.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Список изделий</h2>
+
+<p>
+    @Html.ActionLink("Добавить новое изделие", "Create")
+</p>
+<table class="table table-hover">
+    <tr  class="table-primary">
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.InsertStores)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.Cost)
+        </th>
+        <th scope="col">
+            @Html.DisplayNameFor(model => model.OtherInfo)
+        </th>
+        <th scope="col"></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr  scope="row">
+        <th scope="row">
+            
+            @Html.DisplayFor(modelItem => item.Name)
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.InsertStores)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Photo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OtherInfo)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.id }) |
+            @*@Html.ActionLink("Details", "Details", new { id=item.id }) |*@
+            @Html.ActionLink("Удалить", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

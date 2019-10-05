@@ -1,0 +1,119 @@
+﻿@model IEnumerable<JuvekSoft.Models.MetalStore>
+
+@*@{
+    ViewBag.Title = "MSPartialView";
+}*@
+
+<h2>Металлические материалы</h2>
+
+<p>
+    @Html.ActionLink("Добавить", "Create")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.MetalType.MetTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MetalName.MetalName1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Unit2.UnitName)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Unit1.UnitName)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Cost)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Unit.UnitName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OtherInfo)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.InUse)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+           
+            @*<td>
+                @if (item.Photo != null)
+                {@Html.Raw("<img style='width:80px; height:60px;' src=\"data:image/jpeg;base64,"
+                           + Convert.ToBase64String(item.Photo) + "\" />")}
+            else
+            {
+                {@Html.ActionLink("Добавить", "AddPicture", new { id = item.id })}
+
+        }
+
+            </td>*@
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.MetalType.MetTypeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MetalName.MetalName1)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Size1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unit2.UnitName)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unit1.UnitName)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Unit.UnitName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OtherInfo)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.InUse)
+            </td>
+            <td>
+                @Html.ActionLink("Редактировать", "Edit", new { id = item.id }) |
+                @*@Html.ActionLink("Детали", "Details", new { id = item.id }) |*@
+                @Html.ActionLink("Удалить", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>
+

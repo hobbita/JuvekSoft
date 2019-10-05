@@ -1,0 +1,124 @@
+﻿@model IEnumerable<JuvekSoft.Models.InsertStore>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Ювелирные вставки в наличии</h2>
+
+<p>
+    @Html.ActionLink("Добавить новую вставку", "Create")
+</p>
+<table  class="table table-hover">
+    <tr   class="table-primary">
+        <th  scope="col">
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>
+
+        <th  scope="col">
+            @Html.DisplayNameFor(model => model.InsertMaterial.InsMatName)
+        </th>
+        <th  scope="col">
+            @Html.DisplayNameFor(model => model.FacetingType.FacName)
+        </th>
+        <th  scope="col">
+            @Html.DisplayNameFor(model => model.Size1)
+        </th>
+        <th  scope="col">
+            @Html.DisplayNameFor(model => model.Size2)
+        </th>
+
+        <th  scope="col">
+            @Html.DisplayNameFor(model => model.Size3)
+        </th>
+        <th  scope="col">
+            @Html.DisplayNameFor(model => model.Unit1.UnitName)
+        </th>
+        <th  scope="col">
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th  scope="col">
+            @Html.DisplayNameFor(model => model.Unit.UnitName)
+        </th>
+        <th  scope="col">
+            @Html.DisplayNameFor(model => model.Cost)
+        </th>
+        <th  scope="col">
+            @Html.DisplayNameFor(model => model.Unit2.UnitName)
+        </th>
+
+
+
+
+        <th  scope="col">
+            @Html.DisplayNameFor(model => model.OtherInfo)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.InUse)
+            @Html.HiddenFor(model => model.InUse)
+        </th>*@
+        <th  scope="col"></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @{
+                var base64 = Convert.ToBase64String(item.Photo);
+                var imgstc = string.Format("data:image/jpeg;base64,{0}", base64);
+
+            }
+            <img src="@imgstc" />
+
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.InsertMaterial.InsMatName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FacetingType.FacName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Unit1.UnitName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Unit.UnitName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Unit2.UnitName)
+        </td>
+
+
+
+
+        <td>
+            @Html.DisplayFor(modelItem => item.OtherInfo)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.InUse)
+        </td>*@
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id = item.id }) |
+            @*@Html.ActionLink("Details", "Details", new { id = item.id }) |*@
+            @Html.ActionLink("Удалить", "Delete", new { id = item.id })
+        </td>
+    </tr>
+}
+
+</table>
