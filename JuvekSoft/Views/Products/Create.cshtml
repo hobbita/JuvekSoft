@@ -58,8 +58,9 @@
                     </div>
                 </div>
             </td>
-            <td>@*@Html.RenderPartial("MSPartialView", MetalStore)*@ 
-            @*@Html.RenderAction("Partial")</td>*@
+            <td>
+               @{Html.RenderPartial("PV_Metal");}
+                    </td>
             <td>Рендерим паршл вставки</td>
         </tr>
     </table>

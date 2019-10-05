@@ -58,6 +58,7 @@ namespace JuvekSoft.Controllers
            // ViewBag.InsertStore = new SelectList(db.InsertStores, "id", "InsMat");
             
             return View();
+            
         }
 
         // POST: Products/Create
